@@ -1,0 +1,20 @@
+{
+  "Sample01": [
+    2,
+    1,
+    3,
+    4,
+    5
+  ],
+  "Sample02": [
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "metadata": {
+    "arraySize": 5,
+    "numSamples": 2
+  }
+}
