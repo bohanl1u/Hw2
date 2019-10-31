@@ -6,6 +6,6 @@
 
 #include <vector>
 
-void QuickSort(std::vector<int>* numbers);
-void QuickSortRecurse(std::vector<int>* numbers, int i, int k);
-int Partition(std::vector<int>* numbers, int i, int k);
+void QuickSort(std::vector<int>* numbers, int &comparisons, int &memAccesses);
+void QuickSortRecurse(std::vector<int>* numbers, int i, int k, int &comparisons, int &memAccesses);
+int Partition(std::vector<int>* numbers, int i, int k, int &comparisons, int &memAccesses);

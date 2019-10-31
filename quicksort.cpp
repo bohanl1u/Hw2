@@ -7,11 +7,11 @@
 #include "quicksort.h"
 
 
-void QuickSort(std::vector<int>* numbers) {
-   QuickSortRecurse(numbers, 0, numbers->size() - 1);
+void QuickSort(std::vector<int>* numbers, int &comparisons, int &memAccesses) {
+   QuickSortRecurse(numbers, 0, numbers->size() - 1, comparisons, memAccesses);
 }
 
-void QuickSortRecurse(std::vector<int>* numbers, int i, int k) {
+void QuickSortRecurse(std::vector<int>* numbers, int i, int k, int &comparisons, int &memAccesses) {
    int j = 0;
    
    /* Base case: If there are 1 or zero elements to sort,
@@ -22,17 +22,17 @@ void QuickSortRecurse(std::vector<int>* numbers, int i, int k) {
    
    /* Partition the data within the array. Value j returned
     from partitioning is location of last element in low partition. */
-   j = Partition(numbers, i, k);
+   j = Partition(numbers, i, k, comparisons, memAccesses);
    
    /* Recursively sort low partition (i to j) and
     high partition (j + 1 to k) */
-   QuickSortRecurse(numbers, i, j);
-   QuickSortRecurse(numbers, j + 1, k);
+   QuickSortRecurse(numbers, i, j, comparisons, memAccesses);
+   QuickSortRecurse(numbers, j + 1, k, comparisons, memAccesses);
    
    return;
 }
 
-int Partition(std::vector<int>* numbers, int i, int k) {
+int Partition(std::vector<int>* numbers, int i, int k, int &comparisons, int &memAccesses) {
    int l = 0;
    int h = 0;
    int midpoint = 0;
@@ -43,6 +43,7 @@ int Partition(std::vector<int>* numbers, int i, int k) {
    /* Pick middle element as pivot */
    midpoint = i + (k - i) / 2;
    pivot = (*numbers)[midpoint];
+   memAccesses++;
    
    l = i;
    h = k;
@@ -51,11 +52,15 @@ int Partition(std::vector<int>* numbers, int i, int k) {
       
       /* Increment l while numbers[l] < pivot */
       while ((*numbers)[l] < pivot) {
+         comparisons++;
+         memAccesses++;
          ++l;
       }
       
       /* Decrement h while pivot < numbers[h] */
       while (pivot < (*numbers)[h]) {
+          comparisons++;
+          memAccesses++;
          --h;
       }
       
@@ -65,11 +70,15 @@ int Partition(std::vector<int>* numbers, int i, int k) {
          done = true;
       }
       else {
+          comparisons++;
          /* Swap numbers[l] and numbers[h],
           update l and h */
          temp = (*numbers)[l];
          (*numbers)[l] = (*numbers)[h];
          (*numbers)[h] = temp;
+
+         memAccesses+=4;
+
          
          ++l;
          --h;
