@@ -6,101 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/insertionsort.cpp
-insertionsort.h
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/insertionsort.h
-
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/insertionsort.h
-vector
--
-
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/json.hpp
-algorithm
--
-array
--
-cassert
--
-ciso646
--
-clocale
--
-cmath
--
-cstddef
--
-cstdint
--
-cstdlib
--
-cstring
--
-forward_list
--
-functional
--
-initializer_list
--
-iomanip
--
-iosfwd
--
-iterator
--
-limits
--
-locale
--
-map
--
-memory
--
-numeric
--
-sstream
--
-string
--
-type_traits
--
-utility
--
-valarray
--
-vector
--
-
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/mergesort.cpp
-mergesort.h
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/mergesort.h
-
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/mergesort.h
-vector
--
-
 /cygdrive/x/Documents - HDD/CLionProjects/HW2/quicksort.cpp
 quicksort.h
 /cygdrive/x/Documents - HDD/CLionProjects/HW2/quicksort.h
 
 /cygdrive/x/Documents - HDD/CLionProjects/HW2/quicksort.h
 vector
--
-
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/timealgorithms.cxx
-iostream
--
-json.hpp
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/json.hpp
-fstream
--
-insertionsort.h
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/insertionsort.h
-mergesort.h
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/mergesort.h
-quicksort.h
-/cygdrive/x/Documents - HDD/CLionProjects/HW2/quicksort.h
-vector
--
-chrono
 -
 
